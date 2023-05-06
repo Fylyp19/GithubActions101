@@ -1,4 +1,4 @@
-name: TwoTests
+name: TestOnAll
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
     
 env:
   NUM1: 2
-  NUM2: 4
-  RESULT: 6
+  NUM2: 2
+  RESULT: 4
       
 jobs:
   build:

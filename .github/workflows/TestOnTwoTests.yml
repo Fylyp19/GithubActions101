@@ -6,8 +6,8 @@ on:
     
 env:
   NUM1: 2
-  NUM2: 4
-  RESULT: 6
+  NUM2: 2
+  RESULT: 4
       
 jobs:
   build:
@@ -27,4 +27,4 @@ jobs:
         run: chmod +x gradlew
         
       - name: Test with Gradle
-        run: ./gradlew test --console=plain --tests "CalculatorTest.testAdd,CalculatorTest.testMultiply"
+        run: ./gradlew test --console=plain --tests "CalculatorTest.testAdd CalculatorTest.testMultiply"
