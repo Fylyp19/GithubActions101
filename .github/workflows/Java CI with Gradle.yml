@@ -1,8 +1,6 @@
 name: Java CI with Gradle
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -16,7 +14,8 @@ jobs:
     RESULT: 6
 
   steps:
-  - uses: actions/checkout@v2
+  - name: 
+    uses: actions/checkout@v2
 
   - name: Set up JDK 17
     uses: actions/setup-java@v2
