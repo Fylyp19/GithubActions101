@@ -3,7 +3,7 @@
 Github Actions to funkcja Githuba do przeprowadzania różnych zadań na potrzebę repozytorium. Do zadań należą rzeczy jak uruchamianie skryptów, wdrażania itp.
 Najważniejsze dla nas będzie teraz przeprowadzanie testów jednostkowych (choć pewnie inne funkcje z czasem też nabiorą na znaczeniu).
 
-Zawarta instrukcja użytkowania została napisana dla języka programowania Java (wersja 17) oraz oprogramowania do testów JUnit-Jupiter (wersja 5.8.1). Narzędzie do zbudowania całości to Gradle. No i całość była sprawdzana na Windowsie, jak nie ma uwag do Linuxa, to albo nie zdążyłem, albo większych nie znalazłem. Konsultacje i uwagi mile widziane.
+Zawarta instrukcja użytkowania została napisana dla języka programowania Java (wersja 17) oraz oprogramowania do testów JUnit-Jupiter (wersja 5.8.1). Narzędzie do zbudowania całości to Gradle.
 
 **Jeśli reszta zespołu ma jakieś propozycje do zmian czy preferencji proszę informować**
 
