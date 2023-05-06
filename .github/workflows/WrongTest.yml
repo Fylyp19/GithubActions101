@@ -6,8 +6,8 @@ on:
 
 env:
   NUM1: 2
-  NUM2: 4
-  RESULT: 8
+  NUM2: 2
+  RESULT: 5
 
 jobs:
   build:
