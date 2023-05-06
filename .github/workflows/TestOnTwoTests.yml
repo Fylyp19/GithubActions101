@@ -1,4 +1,4 @@
-name: GoodTest
+name: TwoTests
 
 on:
   push:
