@@ -11,6 +11,7 @@ public class CalculatorTest {
         int result = calculator.add(Integer.parseInt(System.getenv("NUM1")), Integer.parseInt(System.getenv("NUM2")));
         Assertions.assertEquals(Integer.parseInt(System.getenv("RESULT")), result, "Expected result is " + System.getenv("RESULT"));
     }
+    @Test
     public void testSub() {
         Calculator calculator = new Calculator();
         int result = calculator.sub(Integer.parseInt(System.getenv("NUM1")), Integer.parseInt(System.getenv("NUM2")));
