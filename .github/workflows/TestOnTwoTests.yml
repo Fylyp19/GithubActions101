@@ -26,7 +26,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
         
-      - name: TestAdd with Gradle
-        run: ./gradlew test --console=plain --tests="CalculatorTest.testAdd CalculatorTest.testMultiply"
-      - name: TestMultiply with Gradle 
-        run: ./gradlew test --console=plain --tests="CalculatorTest.testAdd CalculatorTest.testAdd"
+      - name: TestMultiply with Gradle
+        run: ./gradlew test --console=plain --tests="CalculatorTest.testMultiply"
+      - name: TestAdd with Gradle 
+        run: ./gradlew test --console=plain --tests="CalculatorTest.testAdd"
