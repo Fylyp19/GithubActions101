@@ -4,14 +4,14 @@ on:
   pull_request:
     branches: [ main ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-  env:
+env:
     NUM1: 2
     NUM2: 4
     RESULT: 6
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
   steps:
   - name: 
