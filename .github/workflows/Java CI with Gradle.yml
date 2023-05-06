@@ -2,31 +2,30 @@ name: Java CI with Gradle
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
-    NUM1: 2
-    NUM2: 4
-    RESULT: 6
+  NUM1: 2
+  NUM2: 4
+  RESULT: 6
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-  steps:
-   - name: "Checkout"
-     uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
 
-   - name: "Set up JDK 17"
-     uses: actions/setup-java@v2
-     with:
-      java-version: '17'
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-   - name: "Grant execute permission for gradlew"
-     run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew build
 
-   - name: "Build with Gradle"
-     run: ./gradlew build
-
-   - name: "Test with Gradle"
-     run: ./gradlew test --tests "CalculatorTest.testAdd"
+      - name: Test with Gradle
+        run: ./gradlew test
