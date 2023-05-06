@@ -27,4 +27,4 @@ jobs:
         run: chmod +x gradlew
         
       - name: Test with Gradle
-        run: ./gradlew test
+        run: run: ./gradlew test --console=plain --tests "CalculatorTest.testAdd"

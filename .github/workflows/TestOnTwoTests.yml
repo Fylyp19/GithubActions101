@@ -1,14 +1,14 @@
-name: WrongTest
+name: GoodTest
 
 on:
   push:
     branches: [master]
-
+    
 env:
   NUM1: 2
   NUM2: 4
-  RESULT: 8
-
+  RESULT: 6
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,6 +25,6 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
+        
       - name: Test with Gradle
-        run: ./gradlew test --console=plain --tests "CalculatorTest.testAdd"
+        run: run: ./gradlew test --console=plain --tests "CalculatorTest.testAdd, CalculatorTest.testSub"
