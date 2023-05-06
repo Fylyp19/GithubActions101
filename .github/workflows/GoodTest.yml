@@ -3,6 +3,8 @@ name: GoodTest
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [ main ]
     
 env:
   NUM1: 2
