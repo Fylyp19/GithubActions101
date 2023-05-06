@@ -2,8 +2,13 @@ name: test
 
 on:
   push:
-    branches:
-      - main
+    branches: [master]
+    
+env:
+  NUM1: 2
+  NUM2: 4
+  RESULT: 6
+      
 jobs:
   build:
     runs-on: ubuntu-latest
