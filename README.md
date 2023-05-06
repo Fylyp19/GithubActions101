@@ -41,6 +41,8 @@ Kod pliku "GoodTest.yml":
     on:
       push:
         branches: [master]
+      pull_request:
+        branches: [master]
         
     env:
       NUM1: 2
