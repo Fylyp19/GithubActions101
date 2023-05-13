@@ -23,17 +23,20 @@ jobs:
       - name: Set Inputs
         id: set_inputs
         run: |
-          echo "::set-output name=param1::2"
-          echo "::set-output name=param2::2"
-          echo "::set-output name=param3::4"
+         echo "param1=2" >> input.properties
+         echo "param2=2" >> input.properties
+         echo "param3=4" >> input.properties
+
       - name: Show Inputs
         run: |
-          echo "Parametr 1: ${{ steps.set_inputs.outputs.param1 }}"
-          echo "Parametr 2: ${{ steps.set_inputs.outputs.param2 }}"
-          echo "Parametr 3: ${{ steps.set_inputs.outputs.param3 }}"
+         cat input.properties
+
       - name: Run Tests
         run: |
-          ./gradlew test --tests CalculatorTest \
-            -Dparam1=${{ steps.set_inputs.outputs.param1 }} \
-            -Dparam2=${{ steps.set_inputs.outputs.param2 }} \
-            -Dparam3=${{ steps.set_inputs.outputs.param3 }}
+         param1=$(grep 'param1' input.properties | cut -d'=' -f2)
+         param2=$(grep 'param2' input.properties | cut -d'=' -f2)
+         param3=$(grep 'param3' input.properties | cut -d'=' -f2)
+         ./gradlew test --tests CalculatorTest \
+          -Dparam1=$param1 \
+          -Dparam2=$param2 \
+          -Dparam3=$param3
