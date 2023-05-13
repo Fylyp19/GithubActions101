@@ -4,6 +4,11 @@ on:
   push:
     branches: [master]
 
+
+env:
+  param1: 2
+  param2: 2
+  param3: 4
       
 jobs:
   build:
@@ -18,25 +23,13 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Set Inputs
-        id: set_inputs
-        run: |
-         echo "param1=2" >> input.properties
-         echo "param2=2" >> input.properties
-         echo "param3=4" >> input.properties
 
       - name: Show Inputs
         run: |
          cat input.properties
 
       - name: Run Tests
-        run: |
-         param1=$(grep 'param1' input.properties | cut -d'=' -f2)
-         param2=$(grep 'param2' input.properties | cut -d'=' -f2)
-         param3=$(grep 'param3' input.properties | cut -d'=' -f2)
-         ./gradlew test --tests CalculatorTest \
-          -Dparam1=$param1 \
-          -Dparam2=$param2 \
-          -Dparam3=$param3
+        run: ./gradlew test --console=plain
