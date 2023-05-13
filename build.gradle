@@ -26,6 +26,9 @@ sourceSets {
 
 test {
     useJUnitPlatform()
+    systemProperty 'param1', System.getProperty('param1')
+    systemProperty 'param2', System.getProperty('param2')
+    systemProperty 'param3', System.getProperty('param3')
 }
 
 java {

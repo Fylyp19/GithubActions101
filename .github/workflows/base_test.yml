@@ -26,12 +26,10 @@ jobs:
           echo "::set-output name=param1::2"
           echo "::set-output name=param2::2"
           echo "::set-output name=param3::4"
-
       - name: Show Inputs
         run: |
           echo "Parametr 1: ${{ steps.set_inputs.outputs.param1 }}"
           echo "Parametr 2: ${{ steps.set_inputs.outputs.param2 }}"
           echo "Parametr 3: ${{ steps.set_inputs.outputs.param3 }}"
-
       - name: Run Tests
-        run: ./gradlew test --param1 ${{ steps.set_inputs.outputs.param1 }} --param2 ${{ steps.set_inputs.outputs.param2 }} --param3 ${{ steps.set_inputs.outputs.param3 }}
+        run: ./gradlew test
