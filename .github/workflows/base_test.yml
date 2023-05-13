@@ -34,6 +34,6 @@ jobs:
       - name: Run Tests
         run: |
           ./gradlew test --tests CalculatorTest \
-            -Pparam1=${{ steps.set_inputs.outputs.param1 }} \
-            -Pparam2=${{ steps.set_inputs.outputs.param2 }} \
-            -Pparam3=${{ steps.set_inputs.outputs.param3 }}
+            -Dparam1=${{ steps.set_inputs.outputs.param1 }} \
+            -Dparam2=${{ steps.set_inputs.outputs.param2 }} \
+            -Dparam3=${{ steps.set_inputs.outputs.param3 }}
