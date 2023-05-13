@@ -13,5 +13,4 @@ public class CalculatorTest {
         int result = calculator.add(param1, param2);
         Assertions.assertEquals(param3, result, "Expected result is " + param3);
     }
-    }
 }
