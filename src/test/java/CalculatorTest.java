@@ -14,7 +14,7 @@ public class CalculatorTest {
         String param3 = System.getProperty("param3");
         Calculator calculator = new Calculator();
         int result = calculator.add(Integer.parseInt(param1), Integer.parseInt(param2));
-        Assertions.assertEquals(Integer.parseInt(param3), result, "Expected result is " + param3));
+        Assertions.assertEquals(Integer.parseInt(param3), result, "Expected result is " + param3);
     }
     /*@Test
     public void testSub() {

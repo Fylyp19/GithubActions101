@@ -39,5 +39,5 @@ jobs:
           echo "Parametr 2: ${{ steps.set_inputs.outputs.param2 }}"
           echo "Parametr 3: ${{ steps.set_inputs.outputs.param3 }}"
 
-      - name: Uruchom testy
+      - name: Run Tests
         run: ./gradlew test --param1 ${{ steps.set_inputs.outputs.param1 }} --param2 ${{ steps.set_inputs.outputs.param2 }} --param3 ${{ steps.set_inputs.outputs.param3 }}
