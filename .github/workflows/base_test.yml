@@ -30,13 +30,3 @@ jobs:
       - name: Run Tests
         run: ./gradlew test --console=plain
         
-      - name: Assert Test Results
-        run: |
-          test_report=$(find . -type f -name "index.html")
-          test_failed=$(grep -c "test-result-failed" $test_report)
-          if [ "$test_failed" -gt 0 ]; then
-            echo "One or more tests failed."
-            exit 1
-          else
-            echo "All tests passed."
-          fi
