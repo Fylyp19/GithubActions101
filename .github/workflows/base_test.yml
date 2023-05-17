@@ -3,6 +3,8 @@ name: BaseTest
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
 
 
 env:
@@ -26,6 +28,9 @@ jobs:
       
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        
+      - name: Build Project
+        run: ./gradlew build
 
       - name: Run Tests
         run: ./gradlew test --console=plain
