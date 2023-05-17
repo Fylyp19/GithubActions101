@@ -2,6 +2,8 @@
 
 EDIT: Repo wymaga lekkiej aktualizacji, został zmieniony styl pisania testów itp.
 
+Rekomendowany edytor do edycji plików YAML: https://codebeautify.org/yaml-editor-online
+
 Github Actions to funkcja Githuba do przeprowadzania różnych zadań na potrzebę repozytorium. Do zadań należą rzeczy jak uruchamianie skryptów, wdrażania itp.
 Najważniejsze dla nas będzie teraz przeprowadzanie testów jednostkowych (choć pewnie inne funkcje z czasem też nabiorą na znaczeniu).
 
