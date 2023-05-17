@@ -1,5 +1,7 @@
 ﻿# Github Actions 101
 
+EDIT: Repo wymaga lekkiej aktualizacji, został zmieniony styl pisania testów itp.
+
 Github Actions to funkcja Githuba do przeprowadzania różnych zadań na potrzebę repozytorium. Do zadań należą rzeczy jak uruchamianie skryptów, wdrażania itp.
 Najważniejsze dla nas będzie teraz przeprowadzanie testów jednostkowych (choć pewnie inne funkcje z czasem też nabiorą na znaczeniu).
 
