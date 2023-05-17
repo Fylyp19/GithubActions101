@@ -10,7 +10,7 @@ on:
 env:
   param1: 2
   param2: 2
-  param3: 4
+  param3: 3
       
 jobs:
   build:
